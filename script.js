@@ -1,0 +1,13 @@
+var pantallaInicio = document.getElementById("inicio");
+var pantallaAgregarPalabra = document.getElementById("agregarPalabra");
+var pantallaJuego = document.getElementById("juego");
+var lienzo = document.querySelector("canvas");
+var pincel = lienzo.getContext("2d");
+const ancho = lienzo.width;
+const alto = lienzo.height;
+var numeroErrores = 0;
+var numeroAciertos = 0;
+var start = false;
+var palabras = ["HTML","CSS","JS","ALURA","ORACLE","ONE","WEB","GIT","GITHUB"];
+var letrasUsadas = [];
+var palabraSecreta;

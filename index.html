@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="image/ahorcado.webp">
+        <title>Ahorcado</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img src="image/logoAlura.png" alt="logoAlura">
+            </div>
+            <div id="conf">
+                <button>&#9881;</button>
+            </div>
+        </header>
+        <main>
+            <section id="inicio">
+                <button onclick="principal()">Iniciar juego</button>
+                <button onclick="nuevaPalabra()">Agregar nueva palabra</button>
+            </section>
+            <section id="agregarPalabra">
+                <input type="text" id="nuevaPalabra" placeholder="Ingrese una palabra" autocomplete="off" autofocus>
+                <div class="botones">
+                    <p>Máx. de 8 letras</p>
+                    <button onclick="agregarPalabraSecreta()">Guardar y Empezar</button>
+                    <button onclick="inicio()">Cancelar</button>
+                </div>
+            </section>
+            <section id="juego">
+                <canvas width="600" height="800"></canvas>
+                <table id="teclado">
+                    <tr>
+                        <td><button value="Q" onclick="presionarTecla(this)">Q</button></td>
+                        <td><button value="W" onclick="presionarTecla(this)">W</button></td>
+                        <td><button value="E" onclick="presionarTecla(this)">E</button></td>
+                        <td><button value="R" onclick="presionarTecla(this)">R</button></td>
+                        <td><button value="T" onclick="presionarTecla(this)">T</button></td>
+                        <td><button value="Y" onclick="presionarTecla(this)">Y</button></td>
+                        <td><button value="U" onclick="presionarTecla(this)">U</button></td>
+                        <td><button value="I" onclick="presionarTecla(this)">I</button></td>
+                        <td><button value="O" onclick="presionarTecla(this)">O</button></td>
+                        <td><button value="P" onclick="presionarTecla(this)">P</button></td>
+                    </tr>
+                    <tr>
+                        <td><button value="A" onclick="presionarTecla(this)">A</button></td>
+                        <td><button value="S" onclick="presionarTecla(this)">S</button></td>
+                        <td><button value="D" onclick="presionarTecla(this)">D</button></td>
+                        <td><button value="F" onclick="presionarTecla(this)">F</button></td>
+                        <td><button value="G" onclick="presionarTecla(this)">G</button></td>
+                        <td><button value="H" onclick="presionarTecla(this)">H</button></td>
+                        <td><button value="J" onclick="presionarTecla(this)">J</button></td>
+                        <td><button value="K" onclick="presionarTecla(this)">K</button></td>
+                        <td><button value="L" onclick="presionarTecla(this)">L</button></td>
+                        <td><button value="Ñ" onclick="presionarTecla(this)">Ñ</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button value="Z" onclick="presionarTecla(this)">Z</button></td>
+                        <td><button value="X" onclick="presionarTecla(this)">X</button></td>
+                        <td><button value="C" onclick="presionarTecla(this)">C</button></td>
+                        <td><button value="V" onclick="presionarTecla(this)">V</button></td>
+                        <td><button value="B" onclick="presionarTecla(this)">B</button></td>
+                        <td><button value="N" onclick="presionarTecla(this)">N</button></td>
+                        <td><button value="M" onclick="presionarTecla(this)">M</button></td>
+                    </tr>
+                </table>
+                <div class="botones">
+                    <button onclick="iniciar()">Nuevo juego</button>
+                    <button onclick="inicio()">Desistir</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            
+            <p>©Prototipado creado por Roosvel Espinoza Villarroel</p>
+        </footer>
+        <script src="funciones.js"></script>
+        <script src="interfaces.js"></script>
+        <script src="graficos.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
